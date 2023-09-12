@@ -118,6 +118,7 @@
 
       const changePcontent = function () {
         const divFig = document.querySelectorAll("div p")
+        // divFig.innerText non funziona perchè è un array, questo funziona solo con un oggetto
 
         divFig.forEach(function (p) {
           p.innerText = "CIAOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO"
@@ -127,7 +128,8 @@
       changePcontent()
 
       /* ESERCIZIO 4
-         Scrivi una funzione che cambi la proprietà href di ogni link (tranne quello nel footer) con il valore https://www.google.com
+         Scrivi una funzione che cambi la proprietà href di ogni link 
+         (tranne quello nel footer) con il valore https://www.google.com
         */
 
       const changeUrls = function () {
@@ -193,16 +195,9 @@
       /* ESERCIZIO 9
          Scrivi una funzione che rimuova l'ultima lettera dall'h1 ogni volta che l'utente lo clicca
         */
-
       const makeItClickable = function () {
         const mainTitle1 = document.getElementsByTagName("h1")[0]
-
-        for (let i = 0; i < mainTitle1.length; i++) {
-          const newMainTitle1 = mainTitle1[i].substring(
-            0,
-            mainTitle1.length - 1
-          )
-        }
+        mainTitle1.innerText = mainTitle1.innerText.slice(0, -1)
       }
 
       makeItClickable()
@@ -278,7 +273,8 @@
       // changeColorWithRandom()
 
       /* EXTRA ESERCIZIO 16
-        Crea una funzione che elimini le vocali da ogni elemento testuale della pagina (puoi aiutarti con i nuovi metodi degli array di ES6)
+        Crea una funzione che elimini le vocali da ogni elemento 
+        testuale della pagina (puoi aiutarti con i nuovi metodi degli array di ES6)
       */
 
       const deleteVowels = function () {}
